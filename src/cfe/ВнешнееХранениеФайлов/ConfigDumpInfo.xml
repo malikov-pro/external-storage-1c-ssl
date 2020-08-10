@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.10">
+	<ConfigVersions>
+		<Metadata name="Catalog.ТомаХраненияФайлов" id="29b908ef-2928-4c8a-b9bb-6db481c7163d" configVersion="acf9150aca209886c89f4322af0517650507009c">
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.внеш_хф_selectel_auth_user" id="150ee425-2270-4130-aca5-69105d010826"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.внеш_хф_selectel_НомерУчётнойЗаписи" id="164362c2-d921-4bb9-9261-94e769e7ff0b"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.Комментарий" id="410937da-413c-4350-90aa-04a98965cc2c"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.внеш_хф_ТипХранилища" id="53cc558a-f613-4fd4-86fe-83c21161983a"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.ПорядокЗаполнения" id="82b0cc2b-a3ba-4f95-9a83-8fb852145ec5"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.ПолныйПутьLinux" id="ac6df86c-3c72-43de-bafd-d818d3842f00"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.ПолныйПутьWindows" id="b7d33be4-2871-4a13-b127-146ff446770f"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.внеш_хф_selectel_auth_password" id="d1cd5bf4-7f98-4b8d-95b1-566aecf880dc"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.МаксимальныйРазмер" id="da5aa275-fe9a-4301-bb92-2f5404a2d3e7"/>
+			<Metadata name="Catalog.ТомаХраненияФайлов.Attribute.внеш_хф_selectel_container" id="e77c7f75-20d0-43e3-9649-eec2a3283816"/>
+		</Metadata>
+		<Metadata name="Catalog.ТомаХраненияФайлов.Form.ФормаЭлемента" id="7cc9e656-cfa5-4904-960d-5ddf30c2de2d" configVersion="1e29be12cbc76c075771f1fb97123b36e1f4810d"/>
+		<Metadata name="Catalog.ТомаХраненияФайлов.Form.ФормаЭлемента.Form" id="7cc9e656-cfa5-4904-960d-5ddf30c2de2d.0" configVersion="9f9a7f7a8f519cde8608eafd8e166df0980e5c8a"/>
+		<Metadata name="Catalog.ТомаХраненияФайлов.ObjectModule" id="29b908ef-2928-4c8a-b9bb-6db481c7163d.0" configVersion="3760badd6cc029b92606712bd015dc04fd183ce0"/>
+		<Metadata name="CommonModule.РаботаСФайлами" id="afba866d-2c63-4fdd-85a6-8b09c91f1394" configVersion="189ab532654f9101a5293892807f42f1995d32d0"/>
+		<Metadata name="CommonModule.РаботаСФайламиВТомахСлужебный" id="b58f4947-c92a-486c-847d-7222994bb459" configVersion="762aab7b11c9a8062567879fa71552abe5bc65be"/>
+		<Metadata name="CommonModule.РаботаСФайламиВТомахСлужебный.Module" id="b58f4947-c92a-486c-847d-7222994bb459.0" configVersion="5c316a58283f3feb85b0b3cd304c75cd74f6165b"/>
+		<Metadata name="CommonModule.РаботаСФайламиСлужебныйКлиентСервер" id="d2a69156-2235-4981-9149-09755c5b463d" configVersion="61d97522437a491e6c1e2f53bb94d7b0df3881cf"/>
+		<Metadata name="CommonModule.РаботаСФайламиСлужебныйКлиентСервер.Module" id="d2a69156-2235-4981-9149-09755c5b463d.0" configVersion="e0be8e666a03aadcf618ae8c4f63c8c7e4ef77a4"/>
+		<Metadata name="CommonModule.внеш_хф_SelectelSwiftAPI" id="fe680acf-5e2e-46ce-90a3-570f32bd24d4" configVersion="e8768f806c33093f52fee80f8914b6424611fe39"/>
+		<Metadata name="CommonModule.внеш_хф_SelectelSwiftAPI.Module" id="fe680acf-5e2e-46ce-90a3-570f32bd24d4.0" configVersion="4dbd56cc235fbb33c4a89429e1377127f8d852d9"/>
+		<Metadata name="Configuration.ВнешнееХранениеФайлов" id="ed4d362b-6696-429a-85d3-4a34bc6305ec" configVersion="c042d0139f7a51adea765181ca3cf33cd5d9193a"/>
+		<Metadata name="Enum.внеш_хф_ТипыХранилищ" id="9a7081ee-2293-4c1e-8b20-90ceb26da602" configVersion="73466ca42f7c0ae5e1735dc74790fdc2da0f9efc">
+			<Metadata name="Enum.внеш_хф_ТипыХранилищ.EnumValue.SelectelSwiftAPI" id="1db0db5e-6084-4821-bfde-001101a3d651"/>
+			<Metadata name="Enum.внеш_хф_ТипыХранилищ.EnumValue.СетеваяПапка" id="fac6c183-a0e3-48dc-a361-5296e49c51b1"/>
+		</Metadata>
+		<Metadata name="Language.Русский" id="ecd1b770-6db4-415c-8f10-d3aa04ebd3e8" configVersion="435977c516babdfaba5122224f244070e557c89a"/>
+		<Metadata name="Role.внеш_хф_ОсновнаяРоль" id="6bd01815-3445-4ab9-85d2-cda0fda523a3" configVersion="e29e7d7af24e8ad0fe2cbfc0cfef776d6fcd99f1"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

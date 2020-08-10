@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="36">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>0</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<ButtonGroup name="СтандартныеКоманды" id="38">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стандартные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="СтандартныеКомандыРасширеннаяПодсказка" id="39"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="40">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="41"/>
+			</Button>
+			<Button name="ФормаПроверитьЦелостностьТома" id="48">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьЦелостностьТомаРасширеннаяПодсказка" id="49"/>
+			</Button>
+			<Button name="ФормаУдалитьЛишниеФайлы" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаУдалитьЛишниеФайлыРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite" callType="After">внеш_хф_ПослеЗаписиПосле</Event>
+		<Event name="OnOpen" callType="After">внеш_хф_ПриОткрытииПосле</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКодИНаименование" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код и наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="25"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="26"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Свойства" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="СвойстваГлавное" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Главное</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СвойстваГлавноеРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="внеш_хф_ТипХранилища" id="52">
+							<DataPath>Объект.внеш_хф_ТипХранилища</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="внеш_хф_ТипХранилищаКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="внеш_хф_ТипХранилищаРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange" callType="Override">внеш_хф_ТипХранилищаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаПути" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пути</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="28"/>
+							<ChildItems>
+								<InputField name="ПолныйПутьWindows" id="5">
+									<DataPath>Объект.ПолныйПутьWindows</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полный путь для сервера 1С:Предприятия под управлением Microsoft Windows</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Меняя путь тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>60</Width>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>\\servername\resource</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПолныйПутьWindowsКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ПолныйПутьWindowsExtendedTooltip" id="29"/>
+								</InputField>
+								<InputField name="ПолныйПутьLinux" id="23">
+									<DataPath>Объект.ПолныйПутьLinux</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полный путь для сервера 1С:Предприятия под управлением Linux</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<Width>60</Width>
+									<ContextMenu name="ПолныйПутьLinuxКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ПолныйПутьLinuxExtendedTooltip" id="30"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаSelectelSwiftAPI" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа selectel swift API</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа selectel swift API</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаSelectelSwiftAPIРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<InputField name="внеш_хф_selectel_НомерУчётнойЗаписи" id="57">
+									<DataPath>Объект.внеш_хф_selectel_НомерУчётнойЗаписи</DataPath>
+									<ContextMenu name="внеш_хф_selectel_НомерУчётнойЗаписиКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="внеш_хф_selectel_НомерУчётнойЗаписиРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="внеш_хф_selectel_auth_user" id="60">
+									<DataPath>Объект.внеш_хф_selectel_auth_user</DataPath>
+									<ContextMenu name="внеш_хф_selectel_auth_userКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="внеш_хф_selectel_auth_userРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="внеш_хф_selectel_auth_password" id="63">
+									<DataPath>Объект.внеш_хф_selectel_auth_password</DataPath>
+									<ContextMenu name="внеш_хф_selectel_auth_passwordКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="внеш_хф_selectel_auth_passwordРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="внеш_хф_selectel_container" id="66">
+									<DataPath>Объект.внеш_хф_selectel_container</DataPath>
+									<ContextMenu name="внеш_хф_selectel_containerКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="внеш_хф_selectel_containerРасширеннаяПодсказка" id="68"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Порядок" id="7">
+							<DataPath>Объект.ПорядокЗаполнения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="ПорядокКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПорядокExtendedTooltip" id="31"/>
+						</InputField>
+						<UsualGroup name="ГруппаМаксимальныйРазмер" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Максимальный размер</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="32"/>
+							<ChildItems>
+								<InputField name="МаксимальныйРазмер" id="17">
+									<DataPath>Объект.МаксимальныйРазмер</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="МаксимальныйРазмерКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="МаксимальныйРазмерExtendedTooltip" id="33"/>
+								</InputField>
+								<InputField name="ТекущийРазмер" id="20">
+									<ReadOnly>true</ReadOnly>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текущий размер всех файлов в томе в мегабайтах.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ТекущийРазмерКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ТекущийРазмерExtendedTooltip" id="34"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СвойстваКомментарий" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СвойстваКомментарийРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="13">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ExtendedEdit>true</ExtendedEdit>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="35"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1000001">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТомаХраненияФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<BaseForm version="2.10">
+		<CommandSet>
+			<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		</CommandSet>
+		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+			<ChildItems>
+				<Button name="ФормаЗаписатьИЗакрыть" id="36">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>0</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="37"/>
+				</Button>
+				<ButtonGroup name="СтандартныеКоманды" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стандартные команды</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="СтандартныеКомандыРасширеннаяПодсказка" id="39"/>
+				</ButtonGroup>
+				<Button name="ФормаСправка" id="40">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="41"/>
+				</Button>
+				<Button name="ФормаПроверитьЦелостностьТома" id="48">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаПроверитьЦелостностьТомаРасширеннаяПодсказка" id="49"/>
+				</Button>
+				<Button name="ФормаУдалитьЛишниеФайлы" id="50">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаУдалитьЛишниеФайлыРасширеннаяПодсказка" id="51"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаКодИНаименование" id="12">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Код и наименование</v8:content>
+					</v8:item>
+				</Title>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаКодИНаименованиеExtendedTooltip" id="25"/>
+				<ChildItems>
+					<InputField name="Наименование" id="3">
+						<DataPath>Объект.Description</DataPath>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+						<ExtendedTooltip name="НаименованиеExtendedTooltip" id="26"/>
+					</InputField>
+					<InputField name="Код" id="1">
+						<DataPath>Объект.Code</DataPath>
+						<SkipOnInput>true</SkipOnInput>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+						<ExtendedTooltip name="КодExtendedTooltip" id="27"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<Pages name="Свойства" id="42">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Свойства</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="43"/>
+				<ChildItems>
+					<Page name="СвойстваГлавное" id="44">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Главное</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СвойстваГлавноеРасширеннаяПодсказка" id="45"/>
+						<ChildItems>
+							<UsualGroup name="ГруппаПути" id="11">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пути</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Vertical</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаПутиExtendedTooltip" id="28"/>
+								<ChildItems>
+									<InputField name="ПолныйПутьWindows" id="5">
+										<DataPath>Объект.ПолныйПутьWindows</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Полный путь для сервера 1С:Предприятия под управлением Microsoft Windows</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>Top</TitleLocation>
+										<WarningOnEdit>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Меняя путь тома, вы потеряете возможность доступа к уже созданным на этом томе файлам</v8:content>
+											</v8:item>
+										</WarningOnEdit>
+										<EditMode>EnterOnInput</EditMode>
+										<Width>60</Width>
+										<InputHint>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>\\servername\resource</v8:content>
+											</v8:item>
+										</InputHint>
+										<ContextMenu name="ПолныйПутьWindowsКонтекстноеМеню" id="6"/>
+										<ExtendedTooltip name="ПолныйПутьWindowsExtendedTooltip" id="29"/>
+									</InputField>
+									<InputField name="ПолныйПутьLinux" id="23">
+										<DataPath>Объект.ПолныйПутьLinux</DataPath>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Полный путь для сервера 1С:Предприятия под управлением Linux</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>Top</TitleLocation>
+										<Width>60</Width>
+										<ContextMenu name="ПолныйПутьLinuxКонтекстноеМеню" id="24"/>
+										<ExtendedTooltip name="ПолныйПутьLinuxExtendedTooltip" id="30"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+							<InputField name="Порядок" id="7">
+								<DataPath>Объект.ПорядокЗаполнения</DataPath>
+								<EditMode>EnterOnInput</EditMode>
+								<SpinButton>true</SpinButton>
+								<ContextMenu name="ПорядокКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ПорядокExtendedTooltip" id="31"/>
+							</InputField>
+							<UsualGroup name="ГруппаМаксимальныйРазмер" id="19">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Максимальный размер</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаМаксимальныйРазмерExtendedTooltip" id="32"/>
+								<ChildItems>
+									<InputField name="МаксимальныйРазмер" id="17">
+										<DataPath>Объект.МаксимальныйРазмер</DataPath>
+										<SpinButton>true</SpinButton>
+										<ContextMenu name="МаксимальныйРазмерКонтекстноеМеню" id="18"/>
+										<ExtendedTooltip name="МаксимальныйРазмерExtendedTooltip" id="33"/>
+									</InputField>
+									<InputField name="ТекущийРазмер" id="20">
+										<ReadOnly>true</ReadOnly>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Текущий размер всех файлов в томе в мегабайтах.</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ContextMenu name="ТекущийРазмерКонтекстноеМеню" id="21"/>
+										<ExtendedTooltip name="ТекущийРазмерExtendedTooltip" id="34"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="СвойстваКомментарий" id="46">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комментарий</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СвойстваКомментарийРасширеннаяПодсказка" id="47"/>
+						<ChildItems>
+							<InputField name="Комментарий" id="13">
+								<DataPath>Объект.Комментарий</DataPath>
+								<TitleLocation>None</TitleLocation>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MultiLine>true</MultiLine>
+								<ExtendedEdit>true</ExtendedEdit>
+								<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="КомментарийExtendedTooltip" id="35"/>
+							</InputField>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+		</ChildItems>
+		<Attributes>
+			<Attribute name="Объект" id="1000001">
+				<Type>
+					<v8:Type>cfg:CatalogObject.ТомаХраненияФайлов</v8:Type>
+				</Type>
+				<MainAttribute>true</MainAttribute>
+				<SavedData>true</SavedData>
+			</Attribute>
+		</Attributes>
+	</BaseForm>
+</Form>
